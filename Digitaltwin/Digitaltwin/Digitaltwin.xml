@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lc:LibraryCompiler xmlns:lc="urn:abb-robotics-robotstudio-librarycompiler"
+										xmlns="urn:abb-robotics-robotstudio-graphiccomponent"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="urn:abb-robotics-robotstudio-librarycompiler file:///C:\Program%20Files%20(x86)\ABB\SDK\RobotStudio%202025%20SDK\LibraryCompilerSchema.xsd
+                                        urn:abb-robotics-robotstudio-graphiccomponent file:///C:\Program%20Files%20(x86)\ABB\SDK\RobotStudio%202025%20SDK\GraphicComponentSchema.xsd">
+	<lc:Library fileName="Digitaltwin.rslib">
+		<lc:DocumentProperties>
+			<lc:Author>FREKLAN</lc:Author>
+			<lc:Image source="Digitaltwin.png"/>
+		</lc:DocumentProperties>
+		<SmartComponent name="Digitaltwin" icon="Digitaltwin.png"
+										codeBehind="Digitaltwin.CodeBehind,Digitaltwin.dll"
+										canBeSimulated="true">
+			<Properties>
+				<DynamicProperty name="IpAdress" caption="IP Adress" valueType="System.String" value="192.168.125.1">
+          <Attribute key="AutoApply" value="true"/>
+        </DynamicProperty>
+        <DynamicProperty name="Mechanism" caption="Mechanism" valueType="ABB.Robotics.RobotStudio.Stations.Mechanism">
+          <Attribute key="AutoApply" value="true"/>
+        </DynamicProperty>
+        <DynamicProperty name="IoSignalName" caption="IO signal name" valueType="System.String" value="DigitalInput1">
+          <Attribute key="AutoApply" value="true"/>
+        </DynamicProperty>
+			</Properties>
+			<Bindings>
+			</Bindings>
+			<Signals>
+        <IOSignal name="Connect" signalType="DigitalInput" autoReset="true"/>
+        <IOSignal name="Disconnect" signalType="DigitalInput" autoReset="true"/>
+        <IOSignal name="Connected" signalType="DigitalOutput" readOnly="true"/>
+        <IOSignal name="AddIoSignal" caption="Add IO Signal" signalType="DigitalInput" autoReset="true"/>
+        <IOSignal name="RemoveIoSignal" caption="Remove IO Signal" signalType="DigitalInput" autoReset="true"/>
+        <IOSignal name="RemoveIoSignalAll" caption="Remove All IO Signal" signalType="DigitalInput" autoReset="true"/>
+			</Signals>
+			<GraphicComponents>
+			</GraphicComponents>
+			<Assets>
+				<Asset source="Digitaltwin.dll"/>
+			</Assets>
+		</SmartComponent>
+	</lc:Library>
+</lc:LibraryCompiler>
