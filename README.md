@@ -12,3 +12,7 @@ Input Parameters:
 While the simulation is running, the SmartComponent will:
 - Read the joint values from the real robot and update the corresponding model in the station
 - Reflect the I/O signal values from the real controller in the simulation
+
+How to use it :
+- Option 1 : import the .rslib to a RobotStudio project (build with RSSDK and PCSDK 2025.2)
+- Option 2 : open the VisualStudio sln and rebuild it with latest RSSDK and PCSDK
